@@ -77,16 +77,16 @@ let imageSize ={
 } 
 
 let image = {
-    familyGathering:`./images/homepage/family-gathering-${imageSize.size}.jpg`,
-    socialEvent: `./images/homepage/social-events-${imageSize.size}.jpg`,
-    specialEvent:`./images/homepage/special-events-${imageSize.size}.jpg`
+    familyGathering:`./starter-code/images/homepage/family-gathering-${imageSize.size}.jpg`,
+    socialEvent: `./starter-code/images/homepage/social-events-${imageSize.size}.jpg`,
+    specialEvent:`./starter-code/images/homepage/special-events-${imageSize.size}.jpg`
 }
 
 function updateImage() {
     image = {
-      familyGathering: `./images/homepage/family-gathering-${imageSize.size}.jpg`,
-      socialEvent: `./images/homepage/social-events-${imageSize.size}.jpg`,
-      specialEvent: `./images/homepage/special-events-${imageSize.size}.jpg`
+      familyGathering: `./starter-code/images/homepage/family-gathering-${imageSize.size}.jpg`,
+      socialEvent: `./starter-code/images/homepage/social-events-${imageSize.size}.jpg`,
+      specialEvent: `./starter-code/images/homepage/special-events-${imageSize.size}.jpg`
     };
 }
 
