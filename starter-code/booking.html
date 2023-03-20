@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../output-styles/booking/booking-styles.css">
+
+  <title>Dine Website</title>
+</head>
+
+<body>
+
+  <div class="container">
+    <section class="container__header">
+      <div class="container__header__bg-image">
+        <picture>
+          <source media="(min-width:42.37em)" srcset="./images/homepage/ready-bg-tablet@2x.jpg">
+          <source media="(min-width:20em)" srcset="./images/homepage/ready-bg-mobile.jpg">
+          <img src="./images/homepage/ready-bg-mobile.jpg" alt="place image">
+        </picture>
+      </div>
+      <div class="container__header__content">
+        <div class="container__header__content__logo"><img src="./images/logo.svg" alt="website logo"></div>
+        <div class="container__header__content__description">
+          <p class="container__header__content__description__title">Reservations</p>
+          <p class="container__header__content__description__para"> We can’t wait to host you. If you have any special
+            requirements please feel free to
+            call on the phone number below. We’ll be happy to accommodate you.
+          </p>
+          <button class="container__header__content__description__button">Reserve Place</button>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="empty">
+      <section class="container__main">
+        <form class="container__main__form" action="#">
+          <input required type="text" placeholder="Name"
+            class="container__main__form__input container__main__form__input--name">
+          <input required type="email" placeholder="Email"
+            class="container__main__form__input container__main__form__input--email">
+          <div class="container__main__form__date">
+            <label for="month">Pick a date</label>
+            <input required type="number" min="1" max="12" placeholder="MM" id="month">
+            <input required type="number" min="1" max="31" placeholder="DD" id="date">
+            <input required type="number" min="2023" max="2030" placeholder="YYYY" id="year">
+          </div>
+          <div class="container__main__form__time">
+            <label for="hours"> Pick a time</label>
+            <input required type="number" min="1" max="12" placeholder="00" id="hours">
+            <input required type="number" min="0" max="60" placeholder="00" id="minutes">
+            <select title="time">
+              <option value="Am">AM</option>
+              <option value="PM">PM</option>
+            </select>
+          </div>
+          <div class="container__main__form__quantity">
+            <button type="button">-</button>
+            <span>0 people</span>
+            <button type="button">+</button>
+          </div>
+          <button class="container__main__form__submit-button" type="submit">make a Reservation</button>
+        </form>
+      </section>
+    </section>
+
+
+
+    <!-- footer block -->
+    <footer class="footer">
+      <section class="footer__about">
+        <div class="footer__about__logo">
+          <img src="./images/logo.svg" alt="website logo bottom">
+        </div>
+        <div class="footer__about__content">
+          <div class="footer__about__content__text footer__about__content__text--location">
+            <p>Marthwaite, Sedbergh</p>
+            <p>Cumbria</p>
+            <p>+00 44 123 4567</p>
+          </div>
+          <div class="footer__about__content__text footer__about__content__text--timings">
+            <p>Open Times</p>
+            <p>Mon - Fri: 09:00 AM - 10:00 PM</p>
+            <p>Sat - Sun: 09:00 AM - 11:30 PM</p>
+          </div>
+        </div>
+      </section>
+    </footer>
+  </div>
+  <script src="./booking.js"></script>
+</body>
+
+</html>

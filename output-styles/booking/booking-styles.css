@@ -1,0 +1,373 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100%;
+}
+
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  height: 100%;
+}
+
+.container__header {
+  position: relative;
+  overflow-x: hidden;
+}
+.container__header__bg-image picture img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+}
+.container__header__content {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin-block: auto;
+  position: absolute;
+  top: 0;
+  color: hsl(0deg, 0%, 100%);
+  display: flex;
+  flex-direction: column;
+  gap: 2.75em;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+@media screen and (min-width: 64em) {
+  .container__header__content {
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    padding-left: 6.25em;
+    padding-top: 3.125em;
+  }
+}
+.container__header__content__logo {
+  width: 82px;
+  height: 33px;
+}
+.container__header__content__description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8125em;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 42.37em) {
+  .container__header__content__description {
+    padding-inline: 2.5em;
+  }
+}
+@media screen and (min-width: 64em) {
+  .container__header__content__description {
+    align-items: flex-start;
+    padding-inline: 0;
+    padding-right: 57.63%;
+  }
+}
+.container__header__content__description__title {
+  font-weight: 300;
+  font-size: 2rem;
+}
+@media screen and (min-width: 42.37em) {
+  .container__header__content__description__title {
+    font-size: 5rem;
+  }
+}
+.container__header__content__description__para {
+  margin-bottom: 0.9375em;
+}
+.container__header__content__description__button {
+  width: 15.875em;
+  height: 4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: hsl(0deg, 0%, 7%);
+  color: hsl(0deg, 0%, 100%);
+  background-color: transparent;
+  border-color: hsl(0deg, 0%, 100%);
+}
+.container__header__content__description__button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 7%);
+  cursor: pointer;
+}
+@media screen and (min-width: 42.37em) {
+  .container__header__content__description__button {
+    display: none;
+  }
+}
+
+label {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 1.25rem;
+  display: block;
+}
+
+input {
+  border: none;
+  font-size: 1.25rem;
+  border-bottom: 1px solid hsl(0deg, 0%, 30%);
+  padding-bottom: 0.7em;
+  box-shadow: none;
+  outline: none;
+  -moz-appearance: textfield;
+}
+input[placeholder] {
+  color: hsl(0deg, 0%, 30%);
+}
+input:invalid {
+  border-bottom: 2px solid red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+select {
+  border: none;
+  border-bottom: 1px solid hsl(0deg, 0%, 30%);
+  font-size: 1.25rem;
+  padding-bottom: 1em;
+  width: 88px;
+  outline: none;
+  background-color: transparent;
+}
+select:hover {
+  cursor: pointer;
+}
+
+.container__main {
+  padding-block: 2.125em;
+  padding-inline: 1.25em;
+  position: absolute;
+  top: -15%;
+  width: 87.2%;
+  max-width: 540px;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  background-color: hsl(0deg, 0%, 100%);
+  -webkit-box-shadow: 10px 10px 43px 0px rgba(0, 0, 0, 0.31);
+  -moz-box-shadow: 10px 10px 43px 0px rgba(0, 0, 0, 0.31);
+  box-shadow: 10px 10px 43px 0px rgba(0, 0, 0, 0.31);
+}
+@media screen and (min-width: 64em) {
+  .container__main {
+    left: 45%;
+    top: -80%;
+    margin-inline: 0;
+  }
+}
+.container__main__form > * {
+  display: block;
+  width: 100%;
+}
+.container__main__form > *:not(:last-child) {
+  margin-bottom: 2.125em;
+}
+.container__main__form__time, .container__main__form__date {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.875em;
+  justify-content: space-between;
+  align-items: center;
+}
+.container__main__form__time label, .container__main__form__date label {
+  width: 100%;
+}
+@media screen and (min-width: 42.37em) {
+  .container__main__form__time label, .container__main__form__date label {
+    width: max-content;
+  }
+}
+.container__main__form__time input, .container__main__form__date input {
+  width: 3.5em;
+  height: 2.15em;
+  text-align: center;
+}
+@media screen and (min-width: 42.37em) {
+  .container__main__form__time input, .container__main__form__date input {
+    width: 4em;
+  }
+}
+.container__main__form__quantity {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid hsl(0deg, 0%, 30%);
+}
+.container__main__form__quantity button {
+  border: none;
+  font-weight: 700;
+  font-size: 1.25rem;
+  background-color: transparent;
+  color: hsl(27deg, 22%, 51%);
+  flex-grow: 1;
+  height: 2.05em;
+  cursor: pointer;
+}
+.container__main__form__quantity span {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.container__main__form__submit-button {
+  width: 15.875em;
+  height: 4em;
+  font-weight: 700;
+  text-transform: uppercase;
+  background-color: hsl(0deg, 0%, 7%);
+  color: hsl(0deg, 0%, 100%);
+  margin-inline: auto;
+}
+.container__main__form__submit-button:hover {
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 7%);
+  cursor: pointer;
+}
+@media screen and (min-width: 42.37em) {
+  .container__main__form__submit-button {
+    width: 100%;
+  }
+}
+
+.empty {
+  position: relative;
+  height: 600px;
+}
+@media screen and (min-width: 42.37em) {
+  .empty {
+    height: 538px;
+  }
+}
+@media screen and (min-width: 64em) {
+  .empty {
+    height: 321px;
+  }
+}
+
+.footer {
+  max-height: 768px;
+}
+.footer__about {
+  background-color: hsl(0deg, 0%, 7%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.625em;
+  padding-block: 5em;
+  padding-inline: 1.5em;
+}
+@media screen and (min-width: 42.37em) {
+  .footer__about {
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: 2.5em;
+    gap: 8.0625em;
+  }
+}
+.footer__about__content {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 2.625em;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  flex-grow: 1;
+}
+@media screen and (min-width: 42.37em) {
+  .footer__about__content {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 64em) {
+  .footer__about__content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.invalid {
+  border-bottom: 2px solid red;
+}
+
+/*# sourceMappingURL=booking-styles.css.map */
